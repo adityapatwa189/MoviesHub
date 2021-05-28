@@ -102,7 +102,7 @@ namespace AspCoreAppWithTests.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MovieId,MovieName,ReleaseDate,Genre,MovieTime")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("MovieId,MovieName,ReleaseDate,Genre,MovieTime,Rating")] Movie movie)
         {
             if (HttpContext.Session.GetString("token") != null)
             {
